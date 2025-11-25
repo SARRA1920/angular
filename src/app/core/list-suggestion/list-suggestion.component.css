@@ -1,0 +1,117 @@
+/* Titre */
+.title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Barre de recherche */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 230px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Carte */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 12px auto;
+  width: 80%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Header de la carte */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #222;
+}
+
+/* Badge status */
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.acceptee { background: #28a745; }
+.refusee { background: #dc3545; }
+.en_attente { background: #fd7e14; }
+
+/* Description */
+.description {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Informations */
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #777;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.like { background: #007bff; color: white; }
+.fav { background: #ffc107; color: #222; }
+
+.likes-count {
+  font-weight: bold;
+  color: #444;
+}
+
+/* Favoris */
+.favorite {
+  background: #ffeaa7;
+  padding: 10px 15px;
+  margin: 10px auto;
+  width: 70%;
+  border-radius: 8px;
+  font-size: 18px;
+}
