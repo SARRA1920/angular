@@ -1,0 +1,14 @@
+<ng-container *ngIf="suggestion; else notFound">
+  <h2>{{ suggestion.title }}</h2>
+  <p>{{ suggestion.description }}</p>
+  <p><strong>Catégorie :</strong> {{ suggestion.category }}</p>
+  <p><strong>Statut :</strong> {{ suggestion.status }}</p>
+  <p><strong>Likes :</strong> {{ suggestion.nbLikes || 0 }}</p>
+  <a routerLink="/suggestions">Back to list</a>
+</ng-container>
+
+<ng-template #notFound>
+  <p>Suggestion introuvable.</p>
+  <a routerLink="/suggestions">Back to list</a>
+</ng-template>
+

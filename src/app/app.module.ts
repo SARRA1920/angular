@@ -9,13 +9,15 @@ import { FooterComponent } from './core/footer/footer.component';
 import { ListSuggestionComponent } from './core/list-suggestion/list-suggestion.component';
 
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './core/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ListSuggestionComponent
+    ListSuggestionComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

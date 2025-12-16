@@ -1,0 +1,69 @@
+<div class="form-page">
+  <h2>Ajouter une suggestion</h2>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div class="field">
+      <label for="title">Titre</label>
+      <input id="title" type="text" formControlName="title" placeholder="Titre" />
+      <div class="error" *ngIf="f.title.touched && f.title.invalid">
+        <span *ngIf="f.title.errors?.['required']">Le titre est requis.</span>
+        <span *ngIf="f.title.errors?.['minlength']">
+          Minimum 5 caractères.
+        </span>
+        <span *ngIf="f.title.errors?.['pattern']">
+          Doit commencer par une majuscule et contenir uniquement des lettres.
+        </span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        rows="4"
+        formControlName="description"
+        placeholder="Décrivez votre suggestion"
+      ></textarea>
+      <div class="error" *ngIf="f.description.touched && f.description.invalid">
+        <span *ngIf="f.description.errors?.['required']">
+          La description est requise.
+        </span>
+        <span *ngIf="f.description.errors?.['minlength']">
+          Minimum 30 caractères.
+        </span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="category">Catégorie</label>
+      <select id="category" formControlName="category">
+        <option value="">-- Choisir une catégorie --</option>
+        <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+      </select>
+      <div class="error" *ngIf="f.category.touched && f.category.invalid">
+        <span *ngIf="f.category.errors?.['required']">
+          La catégorie est requise.
+        </span>
+      </div>
+    </div>
+
+    <div class="field inline">
+      <div>
+        <label>Date</label>
+        <input type="date" formControlName="date" readonly />
+      </div>
+      <div>
+        <label>Status</label>
+        <input type="text" formControlName="status" readonly />
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" [disabled]="form.invalid">Soumettre</button>
+      <button type="button" class="ghost" routerLink="/suggestions">
+        Annuler
+      </button>
+    </div>
+  </form>
+</div>
+

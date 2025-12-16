@@ -5,6 +5,6 @@ export interface Suggestion {
   category: string;
   date: Date;
   status: string;
-  likes?: number;
+  nbLikes: number;
   isFavorite?: boolean;
 }

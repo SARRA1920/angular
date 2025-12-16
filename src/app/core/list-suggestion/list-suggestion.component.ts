@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Suggestion } from '../../models/suggestion';
+import { Suggestion } from '../../features/suggestion';
 
 @Component({
   selector: 'app-list-suggestion',
@@ -21,7 +21,7 @@ export class ListSuggestionComponent {
       category: 'Événements',
       date: new Date('2025-01-20'),
       status: 'acceptee',
-      likes: 0
+      nbLikes: 0
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ export class ListSuggestionComponent {
       category: 'Technologie',
       date: new Date('2025-01-15'),
       status: 'refusee',
-      likes: 0
+      nbLikes: 0
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ export class ListSuggestionComponent {
       category: 'Ressources Humaines',
       date: new Date('2025-01-25'),
       status: 'refusee',
-      likes: 0
+      nbLikes: 0
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ export class ListSuggestionComponent {
       category: 'Technologie',
       date: new Date('2025-01-30'),
       status: 'en_attente',
-      likes: 0
+      nbLikes: 0
     },
     {
       id: 5,
@@ -57,12 +57,12 @@ export class ListSuggestionComponent {
       category: 'Formation',
       date: new Date('2025-02-05'),
       status: 'acceptee',
-      likes: 0
+      nbLikes: 0
     }
   ];
 
   like(s: Suggestion) {
-    s.likes!++;
+    s.nbLikes++;
   }
 
   addToFavorites(s: Suggestion) {

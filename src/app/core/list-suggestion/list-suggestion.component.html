@@ -30,7 +30,7 @@
 
   <div *ngIf="s.status !== 'refusee'" class="actions">
     <button class="btn like" (click)="like(s)">👍 Like</button>
-    <span class="likes-count">{{ s.likes }} likes</span>
+    <span class="likes-count">{{ s.nbLikes }} likes</span>
 
     <button class="btn fav"
             (click)="addToFavorites(s)"

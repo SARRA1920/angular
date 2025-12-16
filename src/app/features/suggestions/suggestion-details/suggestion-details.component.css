@@ -1,0 +1,21 @@
+h2 {
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 4px 0;
+  color: #374151;
+}
+
+a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
